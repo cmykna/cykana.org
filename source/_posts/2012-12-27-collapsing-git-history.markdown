@@ -5,9 +5,13 @@ date: 2012-12-27 10:14
 comments: true
 categories: git, adventure
 ---
-When I was first setting up Octopress, I kind of did it wrong. I straight cloned it from Github into cykana.org locally, which brings Octopress's own git history along with it. What I _should've_ done was clone Octopress separately, then inintialize a new repo and cp/add/commit everything in the Octopress directory into it. Oops. Let's muck around and try to fix this.
+When I was first setting up Octopress, I kind of did it wrong. I straight cloned it from Github into `~/projects/cykana.org` locally, which brings Octopress's own git history along with it. What I _should've_ done was clone Octopress separately, then inintialize a new repo and cp/add/commit everything in the Octopress directory into it. Oops. Let's muck around and try to fix this.
 
-Note: I've got `git log` aliased to `log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short`, so that's what'll show up in log codeblocks below.
+**SPOILERS!** Ended up fixing this by giving up and doing the right thing in the first place, but learned some weird git stuff along the way.
+
+Note: I've got `git log` aliased to `log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short`, which looks really great, so that's what'll show up in log codeblocks that follow.
+
+<!-- more -->
 
 ## Truncating
 
@@ -53,7 +57,7 @@ Okay, I've piddled around enough with stupid git tricks and just want a clean hi
 
 The many, *many* ways you can screw around with git history is pretty interesting, though.
 
-According to people who are probably smarter than me, grafts are more of a quick hack than something you should be making a regular part of your workflow, but in specific cases, git's graft mechanism can be really helpful. Here's what helped me figure all this out:
+According to people who are ~~probably~~ certainly smarter than me, grafts are more of a quick hack than something you should be making a regular part of your workflow, but in specific cases, git's graft mechanism can be really helpful. Here's what helped me figure all this out:
 
 * [StackOverflow - Collapsing a git repository's history](http://stackoverflow.com/a/475931)
 * [StackOverflow - How do git grafts and replace differ?](http://stackoverflow.com/a/6802005)

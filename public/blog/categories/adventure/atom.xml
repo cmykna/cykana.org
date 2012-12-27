@@ -4,7 +4,7 @@
   <title><![CDATA[Category: adventure | cykana.org]]></title>
   <link href="http://cykana.org/blog/categories/adventure/atom.xml" rel="self"/>
   <link href="http://cykana.org/"/>
-  <updated>2012-12-27T11:52:09-06:00</updated>
+  <updated>2012-12-27T13:38:46-06:00</updated>
   <id>http://cykana.org/</id>
   <author>
     <name><![CDATA[Chris Cykana]]></name>
@@ -18,9 +18,14 @@
     <link href="http://cykana.org/blog/2012/12/27/collapsing-git-history/"/>
     <updated>2012-12-27T10:14:00-06:00</updated>
     <id>http://cykana.org/blog/2012/12/27/collapsing-git-history</id>
-    <content type="html"><![CDATA[<p>When I was first setting up Octopress, I kind of did it wrong. I straight cloned it from Github into cykana.org locally, which brings Octopress's own git history along with it. What I <em>should've</em> done was clone Octopress separately, then inintialize a new repo and cp/add/commit everything in the Octopress directory into it. Oops. Let's muck around and try to fix this.</p>
+    <content type="html"><![CDATA[<p>When I was first setting up Octopress, I kind of did it wrong. I straight cloned it from Github into <code>~/projects/cykana.org</code> locally, which brings Octopress's own git history along with it. What I <em>should've</em> done was clone Octopress separately, then inintialize a new repo and cp/add/commit everything in the Octopress directory into it. Oops. Let's muck around and try to fix this.</p>
 
-<p>Note: I've got <code>git log</code> aliased to <code>log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short</code>, so that's what'll show up in log codeblocks below.</p>
+<p><strong>SPOILERS!</strong> Ended up fixing this by giving up and doing the right thing in the first place, but learned some weird git stuff along the way.</p>
+
+<p>Note: I've got <code>git log</code> aliased to <code>log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short</code>, which looks really great, so that's what'll show up in log codeblocks that follow.</p>
+
+<!-- more -->
+
 
 <h2>Truncating</h2>
 
@@ -78,7 +83,7 @@
 
 <p>The many, <em>many</em> ways you can screw around with git history is pretty interesting, though.</p>
 
-<p>According to people who are probably smarter than me, grafts are more of a quick hack than something you should be making a regular part of your workflow, but in specific cases, git's graft mechanism can be really helpful. Here's what helped me figure all this out:</p>
+<p>According to people who are <del>probably</del> certainly smarter than me, grafts are more of a quick hack than something you should be making a regular part of your workflow, but in specific cases, git's graft mechanism can be really helpful. Here's what helped me figure all this out:</p>
 
 <ul>
 <li><a href="http://stackoverflow.com/a/475931">StackOverflow - Collapsing a git repository's history</a></li>
