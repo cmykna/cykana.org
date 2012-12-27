@@ -47,14 +47,14 @@ This works great locally, but what if you're _really_ dumb and have already push
 
 Uh-oh. Now git thinks our branch is 600+ commits behind the branch it's tracking remotely, and pulling from remote will put all those commits back in your history. One solution to this is to just do the graft without the filter-branch: that'll let git pretend that you don't have that old Octopress history locally and keep it out of your logs, but it'll still be visible on Github, which isn't ideal. I just want to track _my_ commits.
 
-## So...now what?
+## Well this is...anticlimactic.
 
+Okay, I've piddled around enough with stupid git tricks and just want a clean history. __FINE__. Ended up doing what I should've done in the first place, which was start from an empty repo and not a cloned Octopress repo.
 
-
-
+The many, *many* ways you can screw around with git history is pretty interesting, though.
 
 According to people who are probably smarter than me, grafts are more of a quick hack than something you should be making a regular part of your workflow, but in specific cases, git's graft mechanism can be really helpful. Here's what helped me figure all this out:
 
-* [StackOverflow](http://stackoverflow.com/a/475931)
-* [StackOverflow](http://stackoverflow.com/a/6802005)
+* [StackOverflow - Collapsing a git repository's history](http://stackoverflow.com/a/475931)
+* [StackOverflow - How do git grafts and replace differ?](http://stackoverflow.com/a/6802005)
 * [wiki.kernel.org GraftPoint entry](https://git.wiki.kernel.org/index.php/GraftPoint)
