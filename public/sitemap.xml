@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
+    <url>
+        <loc>http://cykana.org/blog/2012/12/24/rake-and-zsh/</loc>
+        <lastmod>2012-12-27T10:59:42-06:00</lastmod>
+    </url>
+    <url>
+        <loc>http://cykana.org/blog/2012/12/27/collapsing-git-history/</loc>
+        <lastmod>2012-12-27T11:41:34-06:00</lastmod>
+    </url>
+    <url>
+        <loc>http://cykana.org/blog/archives/</loc>
+        <lastmod>2012-12-27T11:41:34-06:00</lastmod>
+    </url>
+    <url>
+        <loc>http://cykana.org/</loc>
+        <lastmod>2012-12-27T11:41:34-06:00</lastmod>
+    </url>
+</urlset>
